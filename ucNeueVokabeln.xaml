@@ -1,0 +1,87 @@
+﻿<UserControl x:Class="VokkiCoach.ucNeueVokabeln"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VokkiCoach"
+             mc:Ignorable="d" 
+            d:DesignHeight="400" d:DesignWidth="600"
+			 Background="White"
+			 Loaded="UserControl_Loaded"
+             >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Margin="5">
+            <TextBlock FontSize="16">Neue Vokabel anlegen:</TextBlock>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="35"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"/>
+                </Grid.RowDefinitions>
+
+
+                <DockPanel Name="btnVokabeleintrag" Grid.Column="1" ToolTip="Vokabel eintragen!" MouseDown="btnVokabeleintrag_MouseDown">
+                    <local:ucIcon IcoName="EditLabel" x:Name="picNeueVokabel" Margin="3" Cursor="Hand"/>
+                </DockPanel>
+
+                <TextBox Name="txtVokabel"  FontSize="18" TextChanged="txtVokabel_TextChanged"  Margin="3"></TextBox>
+            </Grid>
+
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="2" Grid.Column="0" Margin="5,0,0,0">
+            <StackPanel>
+                <local:ucVokabelnListe x:Name="txtListVokabeln" Mouse.MouseDown="txtListVokabeln_MouseDown"  Grid.Column="1"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <StackPanel Grid.Column="2" Margin="5">
+            <TextBlock FontSize="16">Kategorie suchen:</TextBlock>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="35"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"/>
+                </Grid.RowDefinitions>
+
+
+                <DockPanel Name="btnKategorieSuche" Grid.Column="1" ToolTip="Vokabel eintragen!" MouseDown="btnKategorieSuche_MouseDown">
+                    <local:ucIcon IcoName="Search" x:Name="picKategorieSuche" Margin="3" Cursor="Hand"/>
+                </DockPanel>
+
+                <TextBox Name="txtKategorie"  FontSize="18" TextChanged="txtKategorie_TextChanged"  Margin="3"></TextBox>
+            </Grid>
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="1" Grid.Column="2" Margin="5,0,0,0" Grid.RowSpan="2">
+            <StackPanel>
+                <local:ucTextListe x:Name="txtListKategorien" Mouse.MouseDown="txtListKategorien_MouseDown"  Grid.Column="1"/>
+            </StackPanel>
+        </ScrollViewer>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Left">
+            <RadioButton x:Name="radDeutsch" Content="Deutsch" HorizontalAlignment="Left" Margin="22,10,0,0" Grid.Row="1" VerticalAlignment="Top" IsChecked="True" GroupName="optionSprache" Checked="radSprache_Checked"/>
+            <RadioButton x:Name="radEnglisch" Content="Englisch" HorizontalAlignment="Left" Margin="22,10,0,0" Grid.Row="1" VerticalAlignment="Top" GroupName="optionSprache" Checked="radSprache_Checked"/>
+            <RadioButton x:Name="radItalienisch" Content="Italienisch" HorizontalAlignment="Left" Margin="22,10,0,0" Grid.Row="1" VerticalAlignment="Top" GroupName="optionSprache" Checked="radSprache_Checked"/>
+        </StackPanel>
+
+
+
+    </Grid>
+</UserControl>

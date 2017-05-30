@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="VokkiCoach.ucLeftMenuItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VokkiCoach"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="300"
+			 MouseEnter="UserControl_MouseEnter"
+			 MouseLeave="UserControl_MouseLeave"
+			 Margin="0,2,0,2"
+			 >
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="1"/>
+			<ColumnDefinition Width="50"/>
+			<ColumnDefinition Width="1*"/>
+			<ColumnDefinition Width="1"/>
+		</Grid.ColumnDefinitions>
+
+		<Border Background="#FF0000FF" Grid.Column="0"></Border>
+		<Border Background="#FF0000FF" Grid.Column="3"></Border>
+
+		<DockPanel Background="#FFFFFFFF" Grid.Column="1" Grid.ColumnSpan="1">
+			<local:ucIcon x:Name="mlIconName" Padding="15"/>
+		</DockPanel>
+
+		<DockPanel Background="#FFFFFFFF" Grid.Column="2" Grid.ColumnSpan="1">
+			<TextBlock Name="mlText" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16">-?-</TextBlock>
+		</DockPanel>
+	</Grid>
+</UserControl>

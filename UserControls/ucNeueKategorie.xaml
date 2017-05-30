@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="VokkiCoach.ucNeueKategorie"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VokkiCoach"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="600"
+			 Background="White"
+			 Loaded="UserControl_Loaded"
+			 >
+
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+
+        <StackPanel Margin="5">
+            <TextBlock FontSize="16">Neue Kategorie anlegen:</TextBlock>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="35"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"/>
+                </Grid.RowDefinitions>
+
+
+                <DockPanel Name="btnDBEintrag" Grid.Column="1" ToolTip="Kategorie eintragen!" MouseDown="btnDBEintrag_Click">
+                    <local:ucIcon IcoName="AddDatabase" x:Name="picNeuerEintrag" Margin="3" Cursor="Hand"/>
+                </DockPanel>
+
+                <TextBox Name="txtKategorie"  FontSize="18" TextChanged="TextBox_TextChanged" Margin="3"></TextBox>
+            </Grid>
+
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="1" Grid.Column="0" Margin="5,0,0,0">
+            <StackPanel>
+                <local:ucTextListe x:Name="txtListDaten"  Mouse.MouseDown="txtListDaten_MouseDown" Grid.Column="1"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!--<StackPanel>
+               
+				<local:ucTextListe x:Name="txtListDatenAlt" Mouse.MouseDown="txtListDatenAlt_MouseDown" Grid.Column="1"/>
+			</StackPanel>-->
+
+        <Border Grid.Row="1" Grid.Column="1" Background="#20000000"></Border>
+
+    </Grid>
+</UserControl>

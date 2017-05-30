@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="VokkiCoach.ucMainMenueItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VokkiCoach"
+             mc:Ignorable="d" 
+             d:DesignHeight="128" d:DesignWidth="128" Margin="10"
+			 MouseEnter="UserControl_MouseEnter"
+			 MouseLeave="UserControl_MouseLeave"
+			 		 
+			 >
+	<Grid>
+		<!-- Menüverwaltung -->
+		<DockPanel Background="White" Width="128" Height="128" Name="pnlBackground">
+			<Border Name="bottomBorder" Height="5" DockPanel.Dock="Bottom" Background="#FF0000FF"></Border>
+			<StackPanel>
+				<TextBlock Name="Text" HorizontalAlignment="Center" Margin="5" DockPanel.Dock="Top" FontSize="16">-?-</TextBlock>
+				<local:ucIcon x:Name="Ico" Height="64" Width="64" DockPanel.Dock="Top"/>
+			</StackPanel>
+		</DockPanel>
+	</Grid>
+</UserControl>

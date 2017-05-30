@@ -1,0 +1,51 @@
+﻿<Window x:Class="VokkiCoach.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VokkiCoach"
+        mc:Ignorable="d"
+        Title="Vokki-Coach" Height="740" Width="920" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" FontSize="16">
+
+	<Grid Background="#FFCCCCCC">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="30"/>
+			<RowDefinition Height="1"/>
+			<RowDefinition Height="150"/>
+			<RowDefinition Height="0"/>
+			<RowDefinition Height="69*"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="280"/>
+			<ColumnDefinition Width="1*"/>
+		</Grid.ColumnDefinitions>
+
+
+		<Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#B0000000" Grid.RowSpan="1">
+			<TextBlock FontSize="18" Margin="3" FontWeight="Bold" Foreground="#FFFFA000">Vokki-Coach</TextBlock>
+		</Border>
+		<Border Grid.Row="1" Grid.Column="0" Background="#30000000" Grid.RowSpan="2">
+			<local:ucIcon IcoName="Home" Height="64" Width="64"/>
+
+		</Border>
+		<Border Grid.Row="1" Grid.Column="1" Background="#30000000" Grid.RowSpan="2">
+		</Border>
+		<Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="1" Background="#FFFFA000">
+		</Border>
+		<Border Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="1" Background="#FFFFA000">
+		</Border>
+		<Border Grid.Row="4" Grid.Column="0" Name="areaLeft" MouseDown="areaLeft_MouseDown" ></Border>
+		<Border Grid.Row="4" Grid.Column="1" Name="areaRight"></Border>
+
+		<StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Grid.RowSpan="2">
+			<local:ucMainMenueItem x:Name="mTraining" MouseDown="mTraining_MouseDown"/>
+			<local:ucMainMenueItem x:Name="mStatistik" MouseDown="mStatistik_MouseDown"/>
+			<local:ucMainMenueItem x:Name="mHilfe" MouseDown="mHilfe_MouseDown"/>
+			<local:ucMainMenueItem x:Name="mVerwaltung" MouseDown="mVerwaltung_MouseDown"/>
+
+
+		</StackPanel>
+
+	</Grid>
+
+</Window>
