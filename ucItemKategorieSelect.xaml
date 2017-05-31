@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="VokkiCoach.ucItemKategorieSelect"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VokkiCoach"
+             mc:Ignorable="d" 
+             d:DesignHeight="35" d:DesignWidth="300"
+			 >
+    <Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="35"/>
+			<ColumnDefinition Width="1*"/>
+		</Grid.ColumnDefinitions>
+
+		<DockPanel Margin="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+			<local:ucIcon IcoName="DatabaseSource" ToolTip="Inhalt aus der Datenbank" Cursor="Hand"/>
+		</DockPanel>
+
+		<TextBlock Name="Inhalt" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="16"> ..</TextBlock>
+
+
+	</Grid>
+</UserControl>

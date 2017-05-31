@@ -74,9 +74,19 @@ namespace VokkiCoach
 
 		private void bearbeiten_MouseDown(object sender, RoutedEventArgs e)
 		{
-
+			Console.WriteLine("bearbeiten");
+			this.itemEdit.Visibility = Visibility.Visible;
+			this.itemSave.Visibility = Visibility.Visible;
+			this.Copy.Visibility = Visibility.Collapsed;
+			this.Status = ActionType.Bearbeiten;
+			this.itemEdit.Text = this.Inhalt.Text;
 		}
 
+		/// <summary>
+		/// Kopieranweisung kopiert Text von einem Listeelement 
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void Copy_MouseDown(object sender, RoutedEventArgs e)
 		{
 			Console.WriteLine("copy");

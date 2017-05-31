@@ -80,7 +80,7 @@ namespace VokkiCoach
 		/// </summary>
 		public void chkButtonStatusDB()
 		{
-			this.picNeuerEintrag.IcoName = (anDBSendenErlaubt) ? "AddDatabase" : "StatusNo";
+			this.picNeuerEintrag.IcoName = (anDBSendenErlaubt) ? "Save" : "StatusNo";
 			this.picNeuerEintrag.ToolTip = (anDBSendenErlaubt) ? "Kategorie eintragen!" : "Keine Doppelten Einträge möglich!";
 			this.btnDBEintrag.IsEnabled = anDBSendenErlaubt;
 		}

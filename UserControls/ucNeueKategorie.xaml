@@ -35,7 +35,7 @@
 
 
                 <DockPanel Name="btnDBEintrag" Grid.Column="1" ToolTip="Kategorie eintragen!" MouseDown="btnDBEintrag_Click">
-                    <local:ucIcon IcoName="AddDatabase" x:Name="picNeuerEintrag" Margin="3" Cursor="Hand"/>
+                    <local:ucIcon IcoName="Save" x:Name="picNeuerEintrag" Margin="3" Cursor="Hand"/>
                 </DockPanel>
 
                 <TextBox Name="txtKategorie"  FontSize="18" TextChanged="TextBox_TextChanged" Margin="3"></TextBox>

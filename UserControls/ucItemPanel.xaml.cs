@@ -35,7 +35,7 @@ namespace VokkiCoach
 			Bearbeiten,
 			Loeschen,
 			Kopieren,
-			Neuladen,
+			Neuladen
 		}
 
 		public ucItemPanel()

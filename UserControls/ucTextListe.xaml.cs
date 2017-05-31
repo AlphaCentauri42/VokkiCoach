@@ -57,6 +57,7 @@ namespace VokkiCoach
 			}
 		}
 
+
 		/// <summary>
 		/// Ersetze alle Text-Einträge durch die Liste neuer Text-Einträge
 		/// </summary>

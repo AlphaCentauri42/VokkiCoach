@@ -94,7 +94,7 @@ namespace VokkiCoach
 		/// </summary>
 		public void chkButtonStatusDB()
 		{
-			this.picNeueVokabel.IcoName = (anDBSendenErlaubt) ? "AddDatabase" : "StatusNo";
+			this.picNeueVokabel.IcoName = (anDBSendenErlaubt) ? "Save" : "StatusNo";
 			this.picNeueVokabel.ToolTip = (anDBSendenErlaubt) ? "Vokabel eintragen!" : "Keine Doppelten Einträge möglich!";
 			this.picNeueVokabel.IsEnabled = anDBSendenErlaubt;
 
@@ -138,6 +138,30 @@ namespace VokkiCoach
 			this.chkButtonStatusDB();
 		}
 
+		private void txtPhonetik_TextChanged(object sender, TextChangedEventArgs e)
+		{
 
+		}
+
+		private void btnPhonetik_MouseDown(object sender, MouseButtonEventArgs e)
+		{
+
+		}
+
+		private void txtVokabel_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.Key == Key.Enter)
+			{
+				this.txtPhonetik.Focus();
+			}
+		}
+
+		private void txtPhonetik_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.Key == Key.Enter)
+			{
+				this.txtVokabel.Focus();
+			}
+		}
 	}
 }
